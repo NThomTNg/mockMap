@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Marker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaQfDDbH4x2uwfH-erPixAsB1rqcaCPWU&callback=console.debug&libraries=maps,marker&v=beta"
+    ></script>
+  </head>
+  <body>
+    <button class="menu-btn" onclick="toggleMenu()">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+
+    <nav class="nav-menu">
+      <h2>Menu</h2>
+      <ul>
+        <li>Test 1</li>
+        <li>Test 2</li>
+        <li>Test 3</li>
+      </ul>
+    </nav>
+
+    <gmp-map
+      center="62.26981583995788,8.54473431135494"
+      zoom="6"
+      map-id="b92345e2aaf2b55b"
+      map-controls='{"mapTypeControl": false,
+                    "mapTypeControlOptions": {
+                      "position": "BOTTOM_CENTER"
+                    },
+                    "zoomControl": false,
+                    "zoomControlOptions": {
+                      "position": "RIGHT_BOTTOM"
+                    },
+                    "streetViewControl": false,
+                    "fullscreenControl": false
+                    }'
+    >
+    </gmp-map>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-menu").classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
